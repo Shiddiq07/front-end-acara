@@ -3,25 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "tailwind-init": "tailwindcss init -p",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@nextui-org/react": "^2.6.11",
+    "@tanstack/react-query": "^5.90.16",
+    "axios": "^1.7.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.26",
+    "next": "15.5.7",
+    "next-auth": "^4.24.13",
+    "postcss-preset-env": "^10.5.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.7"
+    "react-hook-form": "^7.52.1",
+    "react-icons": "^5.2.1",
+    "tailwind-merge": "^2.4.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.5.7",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8.4.49",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
   }
 }
