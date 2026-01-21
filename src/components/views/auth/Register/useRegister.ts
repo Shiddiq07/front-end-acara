@@ -3,7 +3,7 @@ import * as yup from "yup";
 import {useForm} from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup";
 import { IRegister } from "@/types/Auth";
-import authServices from "@/services/auth";
+import authServices from "@/services/auth.service";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 
@@ -19,7 +19,7 @@ const registerSchema=yup.object().shape({
     confirmPassword:yup.string().oneOf([yup.ref("password"),""],"password not match").required("password Conformation is required")
 })
 
-const useRegister =()=>{
+const useRegister =()=> {
     const router=useRouter();
 const [VisiblePassword, setVisiblePassword] = useState({
     password:false,
@@ -27,7 +27,7 @@ const [VisiblePassword, setVisiblePassword] = useState({
 })
 const handleVisiblePassword=(
     key:"password" | "confirmPassword"
-) =>{
+) => {
     setVisiblePassword({
         ...VisiblePassword,
         [key]:!VisiblePassword[key],
@@ -49,6 +49,7 @@ const {mutate:mutateRegister,isPending:isPendingRegister}=useMutation({
         setError("root",{
             message:error.message
         })
+        console.log(error);
     },
     onSuccess:()=>{
   router.push("/auth/register/success");

@@ -1,14 +1,13 @@
 import AuthLayout from "@/components/layouts/AuthLayout";
-import Register from "@/components/views/Register";
+import RegisterSuccess from "@/components/views/auth/RegisterSuccess";
 
-const RegisterPage =()=>{
+const RegisterSuccessPage =()=>{
     return(
 
         <AuthLayout>
-<h1>
-    Register Success</h1>        </AuthLayout>
-
+            <RegisterSuccess />
+        </AuthLayout>    
 
     )
 }
-export default RegisterPage
+export default RegisterSuccessPage

@@ -6,6 +6,7 @@ import { Controller } from "react-hook-form";
 
 const Register =()=>{
     const {VisiblePassword,handleVisiblePassword,control,handleSubmit,handleRegister,isPendingRegister,errors}= useRegister();
+   console.log(errors)
     return(
         <div className="flex w-full flex-col lg:flex-row justify-center items-center h-screen gap-10 lg:gap-20">
           <div className="flex w-full lg:w-1/3 flex-col items-center justify-center gap-10">
