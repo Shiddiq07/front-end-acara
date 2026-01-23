@@ -45,7 +45,7 @@ const registerService=async(payload:IRegister)=>{
 
 const {mutate:mutateRegister,isPending:isPendingRegister}=useMutation({
     mutationFn:registerService,
-    onError:(error:any)=>{
+    onError:(error:Error)=>{
         setError("root",{
             message:error.message
         })
