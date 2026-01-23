@@ -4,7 +4,7 @@ import useRegister from "./useRegister";
 import { FaEye, FaEyeSlash} from "react-icons/fa6";
 import { Controller } from "react-hook-form";
 
-const Register =()=>{
+const Register = ()=>{
     const {VisiblePassword,handleVisiblePassword,control,handleSubmit,handleRegister,isPendingRegister,errors}= useRegister();
    console.log(errors)
     return(
@@ -54,7 +54,7 @@ const Register =()=>{
                         label="Full Name"  
                         variant="bordered"
                          autoComplete="off"
-                         isInvalid={errors.fullName !==undefined}
+                         isInvalid={errors.fullName !== undefined}
                          errorMessage={errors.fullName?.message}
                          />
 
