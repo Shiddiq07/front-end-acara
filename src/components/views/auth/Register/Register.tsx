@@ -103,8 +103,8 @@ const Register = ()=>{
                          
                          >
 
-{VisiblePassword.password ?<FaEye className="pointer-events-none text-xl text-default-400" /> 
-: <FaEyeSlash  className="pointer-events-none text-xl text-default-400" />}
+{VisiblePassword.password ?(<FaEye className="pointer-events-none text-xl text-default-400" /> )
+: (<FaEyeSlash  className="pointer-events-none text-xl text-default-400" />)}
   
   
     </button>} autoComplete="off"   

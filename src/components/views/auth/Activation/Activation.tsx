@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useRouter } from "next/router";
 
 interface PropTypes{
-    status:'Success'|'Failed'
+    status:'success'|'failed'
 }
 
 const Activation =(props:PropTypes)=>{
@@ -21,7 +21,7 @@ const Activation =(props:PropTypes)=>{
                            />
                
                             <Image 
-                           src={status === "Success" ? "/images/illustration/email-send.svg" : "/images/illustration/pending.svg"}
+                           src={status === "success" ? "/images/illustration/email-send.svg" : "/images/illustration/pending.svg"}
                            alt="success"
                            className="w-2/3 lg:w-full"
                            width={300}
@@ -33,10 +33,10 @@ const Activation =(props:PropTypes)=>{
             </div>
 <div className="flex flex-col items-center gap-2 text-center"> 
     <h1 className="text-3xl font-bold text-danger-500">
-{status === "Success" ? "Activation Success" : "Activation Failed"}
+{status === "success" ? "Activation Success" : "Activation Failed"}
     </h1>
     <p className="text-xl font-bold text-default-500">
-        {status === "Success" ? "Thank you for register account in acara" : "confimation code is invalid"}
+        {status === "success" ? "Thank you for register account in acara" : "confimation code is invalid"}
          </p>
     <Button className="mt-4 w-fit" variant="bordered" color="danger" onPress={()=>router.push('/')}>
 Back to Home

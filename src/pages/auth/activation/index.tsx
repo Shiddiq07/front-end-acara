@@ -3,13 +3,13 @@ import Activation from "@/components/views/auth/Activation";
 import authServices from "@/services/auth.service";
 
 interface PropTypes{
-    status:'Success'|'Failed'
+    status:'success'|'failed'
 }
 
 const ActivationPage =(props :PropTypes )=>{
     return(
 
-        <AuthLayout title="acara | Activation">
+        <AuthLayout title=" Acara | Activation">
 <Activation {...props}/>   
    </AuthLayout>
     )

@@ -22,9 +22,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
     <NextUIProvider>
-      <main className={cn(inter.className,'flex min-h-screen min-w-full flex-col items-center justify-center gap-10 py-10 lg:py ')}>
+      <main className={cn(inter.className)}>
 
-      {/* Di Pages Router, Component inilah yang merender index.tsx Anda */}
+      {/* Di Pages Router, Component inilah yang merender index.tsx  */}
       <Component {...pageProps} />
       </main>
    
